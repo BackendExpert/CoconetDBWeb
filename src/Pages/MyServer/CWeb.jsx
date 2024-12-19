@@ -5,20 +5,20 @@ import axios from 'axios';
 const CWeb = () => {
     const [isBackendRunning, setIsBackendRunning] = useState(false);
     const [files, setFiles] = useState([]);
-    const [ServerPort, SetServerPort] = useState(localStorage.getItem('port') || '5000');
+    const [ServerPort, SetServerPort] = useState(localStorage.getItem('port'));
     const [ProtData, SetPortData] = useState({
         portno: ServerPort,
     });
 
-    // This useEffect will now run whenever ServerPort changes
+
     useEffect(() => {
-        // Check if the backend is running
+
         axios
           .get(`${import.meta.env.VITE_APP_API}${ServerPort}/config/dbconfig`)
           .then((response) => {
             if (response.status === 200) {
               setIsBackendRunning(true);
-              setFiles(response.data); // Assuming response contains file data
+              setFiles(response.data); 
             } else {
               setIsBackendRunning(false);
             }
@@ -27,7 +27,7 @@ const CWeb = () => {
             console.error('Error connecting to backend:', error);
             setIsBackendRunning(false);
           });
-    }, [ServerPort]);  // Adding ServerPort to the dependency array to re-run when it's updated
+    }, [ServerPort]); 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
