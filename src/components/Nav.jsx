@@ -7,7 +7,7 @@ const Nav = () => {
             <div className="flex justify-between">
                 <div className="flex">
                     <img src="https://avatars.githubusercontent.com/u/189954645?s=48&v=4" alt="" />
-                    <h1 className="text-xl pt-3 text-yellow-600 font-semibold"><span className='uppercase'>CoconutDB Web</span> v1</h1>
+                    <h1 className="text-xl pt-3 text-yellow-600 font-semibold"><span className='uppercase'>CoconutDB Web</span> Limited Edition</h1>
                 </div>
             </div>
         </div>
