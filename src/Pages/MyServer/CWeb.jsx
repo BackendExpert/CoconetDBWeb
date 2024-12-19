@@ -45,7 +45,7 @@ const CWeb = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-200/50 p-4 px-32">
+        <div className="min-h-auto bg-gray-200/50 p-4 px-32">
             <h1 className="text-2xl text-gray-500 my-4 text-center font-semibold mb-4">
                 Database Configuration of Your CERN Project (CoconutDB Express ReactJs NodeJs)
             </h1>
