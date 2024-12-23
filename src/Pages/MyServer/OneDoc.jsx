@@ -77,9 +77,22 @@ const OneDoc = () => {
       </a>
 
       <h1 className="text-2xl font-bold">Document: {file}</h1>
-      <div className="bg-gray-100 p-4 mt-4 rounded shadow">
-        {renderStyledJSON(documentData)}
+      <div className="flex">
+        <div className="w-full mr-4 bg-gray-100 p-4 mt-4 rounded shadow">
+          {renderStyledJSON(documentData)}
+        </div>
+        <div className="w-full ml-4 p-4 mt-4 rounded shadow">
+          <div className="flex">
+            <div className="">
+              <button className='bg-green-500 text-white rounded py-2 px-4 mx-2'>Add New Data</button>
+              <button className='bg-blue-600 text-white rounded py-2 px-4 mx-2'>View By ID</button>
+              <button className='bg-blue-400 text-white rounded py-2 px-4 mx-2'>Update By ID</button>
+              <button className='bg-red-500 text-white rounded py-2 px-4 mx-2'>Delete By ID</button>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   )
 }
